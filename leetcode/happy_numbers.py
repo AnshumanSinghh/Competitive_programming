@@ -10,10 +10,10 @@ def happy_numbers(num):
             sosod += (current % 10) ** 2 #(current % 10)
             current //= 10
         
-        if sosod in seen:  # if sum of square of digits gets repeated menas it forms cycle (can't be 1).
+        if sosod in seen:  # if sum of square of digits gets repeated means it forms cycle (can't be 1).
 
             seen[num] = sosod
-            return False, seen # two smae sosod values indicates it is cyclic. So, not a happy number.
+            return False, seen # two same sosod values indicates it is cyclic. So, not a happy number.
 
         else:  # if not then add it to the seen dictionary to track if any cycle form or not.
             seen[num] = sosod
